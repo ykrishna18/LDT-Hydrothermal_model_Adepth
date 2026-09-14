@@ -1,0 +1,194 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+
+defaultFieldValues
+(
+    volScalarFieldValue permeability 5e-18
+);
+
+defaultFieldValues
+(
+    volScalarFieldValue T 278.15
+);
+
+
+regions
+(
+    boxToCell
+    {
+        box (0 -500 0) (2000 0 1);
+        fieldValues
+        (
+            volScalarFieldValue T 309.1
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -1000 0) (2000 -500 1);
+        fieldValues
+        (
+            volScalarFieldValue T 371.0
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -1500 0) (2000 -1000 1);
+        fieldValues
+        (
+            volScalarFieldValue T 432.8
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -2000 0) (2000 -1500 1);
+        fieldValues
+        (
+            volScalarFieldValue T 494.7
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -2500 0) (2000 -2000 1);
+        fieldValues
+        (
+            volScalarFieldValue T 556.6
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -3000 0) (2000 -2500 1);
+        fieldValues
+        (
+            volScalarFieldValue T 618.4
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -3500 0) (2000 -3000 1);
+        fieldValues
+        (
+            volScalarFieldValue T 680.3
+        );
+    }
+
+    boxToCell
+    {
+        box (0 -4000 0) (2000 -3500 1);
+        fieldValues
+        (
+            volScalarFieldValue T 742.2
+        );
+    }
+    // =========================
+    // Dyke temperature
+    // =========================
+    zoneToCell
+    {
+        zone dyke_region;
+
+        fieldValues
+        (
+            volScalarFieldValue T 1250
+        );
+    }
+
+    zoneToCell
+    {
+        zone dyke_region2;
+
+        fieldValues
+        (
+            volScalarFieldValue T 1250
+        );
+    }
+
+    zoneToCell
+    {
+        zone dyke_region3;
+
+        fieldValues
+        (
+            volScalarFieldValue T 1250
+        );
+    }
+
+
+    // =========================
+    // Layer 1: 0 - 500 m
+    // =========================
+    boxToCell
+    {
+        box (0 -500 0) (2000 0 1);
+
+        fieldValues
+        (
+            volScalarFieldValue permeability 1e-13
+        );
+    }
+
+
+    // =========================
+    // Layer 2: 500 - 2000 m
+    // =========================
+    boxToCell
+    {
+        box (0 -2000 0) (2000 -500 1);
+
+        fieldValues
+        (
+            volScalarFieldValue permeability 1e-14
+        );
+    }
+
+
+    // =========================
+    // Layer 3: 2000 - 3000 m
+    // =========================
+    boxToCell
+    {
+        box (0 -3000 0) (2000 -2000 1);
+
+        fieldValues
+        (
+            volScalarFieldValue permeability 1e-15
+        );
+    }
+
+
+    // =========================
+    // Layer 4: 3000 - 4000 m
+    // =========================
+    boxToCell
+    {
+        box (0 -4000 0) (2000 -3000 1);
+
+        fieldValues
+        (
+            volScalarFieldValue permeability 1e-18
+        );
+    }
+);
+
+// ************************************************************************* //

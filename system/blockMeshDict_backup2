@@ -1,0 +1,252 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+Lx 5000;    //variable definition
+h  3000;
+d  100;
+l  3000;
+ymin -5000;
+ymax 0;
+
+res_matrix 50;
+res_fault  5;
+
+
+x0 0;
+x1 #calc "$x0 + ($x0 + $Lx/2 -$d/2)";
+x2 #calc "$x1 +$d/2";
+x3 #calc "$x0 + $Lx";
+
+y1 #calc "$ymax - $h";
+
+z0 0;
+z1 #calc"$z0 + $l";
+
+nx1 #calc "round(($x1  -$x0) / $res_matrix)";
+nx2 #calc "round(($x2 - $x1) / $res_matrix)";
+nx3 #calc "round(($x3 - $x2) / $res_matrix)";
+nx4 #calc "round(($x1 - $x0) / $res_matrix)";
+nx5 #calc "round(($x2 - $x1) / $res_fault)";
+nx6 #calc "round(($x3 - $x2) / $res_matrix)";
+
+ny1 #calc "round(($y1 - $ymin) / $res_matrix)";
+ny2 #calc "round(($ymax - $y1) / $res_matrix)";
+nyf #calc "round(($ymax - $y1) / $res_fault)";
+
+nz  #calc "round(($z1 - $z0) / $res_matrix)";
+nzf #calc "round(($z1 - $z0) / $res_fault)";
+
+
+
+
+vertices    //vertices definition
+(
+    ($x0    $ymin   $z0)  //coordinate of vertex 0
+    ($x1    $ymin   $z0)  //coordinate of vertex 1
+    ($x1    $y1   $z0)  //coordinate of vertex 2
+    ($x0    $y1   $z0)  //coordinate of vertex 3
+    ($x0    $ymin $z1)//coordinate of vertex 4
+    ($x1    $ymin  $z1)//coordinate of vertex 5
+    ($x1    $y1   $z1)//coordinate of vertex 6
+    ($x0    $y1   $z1)//coordinate of vertex 7
+    ($x2    $ymin   $z0)  //coordinate of vertex 8
+    ($x2    $y1    $z0)  //coordinate of vertex 9
+    ($x2    $ymin  $z1)//coordinate of vertex 10
+    ($x2    $y1   $z1)//coordinate of vertex 11
+    ($x3    $ymin   $z0)  //coordinate of vertex 12
+    ($x3    $y1    $z0)  //coordinate of vertex 13
+    ($x3    $ymin  $z1)//coordinate of vertex 14
+    ($x3    $y1   $z1)//coordinate of vertex 15
+    ($x0    $ymax   $z0)  //coordinate of vertex 16
+    ($x0    $ymax   $z1)//coordinate of vertex 17
+    ($x1    $ymax   $z0)  //coordinate of vertex 18
+    ($x1    $ymax   $z1)//coordinate of vertex 19
+    ($x2    $ymax    $z0)  //coordinate of vertex 20
+    ($x2    $ymax   $z1)//coordinate of vertex 21
+    ($x3    $ymax    $z0)  //coordinate of vertex 22
+    ($x3    $ymax   $z1)//coordinate of vertex 23
+
+    ($x1    $y1   $z0)  //coordinate of vertex 24
+    ($x2    $y1    $z0)  //coordinate of vertex 25
+    ($x2    $ymax    $z0)  //coordinate of vertex 26
+    ($x1    $ymax   $z0)  //coordinate of vertex 27
+    ($x1    $y1   $z1)//coordinate of vertex 28
+    ($x2    $y1   $z1)//coordinate of vertex 29
+    ($x2    $ymax   $z1)//coordinate of vertex 30
+    ($x1    $ymax   $z1)//coordinate of vertex 31
+
+
+
+);
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) matrix ($nx1 $ny1 $nz) simpleGrading (1 1 1)
+    hex (1 8 9 2 5 10 11 6) matrix ($nx2 $ny1 $nz) simpleGrading (1 1 1)
+    hex (8 12 13 9 10 14 15 11) matrix ($nx3 $ny1 $nz) simpleGrading (1 1 1)
+    hex (3 2 18 16 7 6 19 17) matrix ($nx4 $ny2 $nz) simpleGrading (1 1 1)
+    hex (24 25 26 27 28 29 30 31) fault ($nx5 $nyf $nzf) simpleGrading (1 1 1)
+    hex (9 13 22 20 11 15 23 21) matrix ($nx6 $ny2 $nz) simpleGrading (1 1 1)
+);
+boundary
+(
+    left    //patch name
+    {
+        type patch ;
+        faces   //face list
+        (
+            (0 4 7 3)
+            (3 7 17 16)
+        );
+    }
+    right
+    {
+        type patch;
+        faces
+        (
+            (13 15 14 12)
+            (22 23 15 13)
+        );
+    }
+    top
+    {
+        type patch;
+        faces
+        (
+            (18 16 17 19)
+            (26 27 31 30)
+            (22 20 21 23)
+        );
+    }
+    bottom
+    {
+        type patch;
+        faces
+        (
+            (1 5 4 0)
+            (8 10 5 1)
+            (12 14 10 8)
+        );
+    }
+    frontAndBack    //patch name
+    {
+        type patch; 
+        faces //face list
+        (
+            (0 3 2 1)   //back face
+            (1 2 9 8)   //back face
+            (8 9 13 12)   //back face
+            (6 7 4 5)   //front face
+            (11 6 5 10)   //front face
+            (15 11 10 14)   //front face
+            (3 16 18 2)   //back face
+            (27 26 25 24)   //back face
+            (9 20 22 13)   //back face
+            (19 17 7 6)   //front face
+            (30 31 28 29)   //front face
+            (23 21 11 15)   //front face
+        );
+    }
+);
+
+patches
+(
+    leftMerge_matrix
+    {
+        type patch;
+        faces
+        (
+            (18 19 6 2)
+        );
+    }
+    leftMerge_fault
+    {
+        type patch;
+        faces
+        (
+            (27 24 28 31)
+        );
+    }
+    rightMerge_matrix
+    {
+        type patch;
+        faces
+        (
+            (11 9 20 21)
+        );
+    }
+    rightMerge_fault
+    {
+        type patch;
+        faces
+        (
+            (29 25 26 30)
+        );
+    }
+    botMerge_matrix
+    {
+        type patch;
+        faces
+        (
+            (9 2 6 11)
+        );
+    }
+    botMerge_fault
+    {
+        type patch;
+        faces
+        (
+            (25 24 28 29)
+        );
+    }
+);
+
+/*patches
+(
+    patch leftMerge_matrix
+    (
+        (18 19 6 2)
+    )
+    patch leftMerge_fault
+    (
+        (27 24 28 31)
+    )
+    patch rightMerge_matrix
+    (
+        (1 9 20 21)
+    )
+    patch rightMerge_fault
+    (
+        (29 25 26 30)
+    )
+    patch botMerge_matrix
+    (
+        (9 2 6 11)
+    )
+    patch botMerge_fault
+    (
+        (25 24 28 29)
+    )
+);
+*/
+mergePatchPairs
+(
+( leftMerge_matrix leftMerge_fault )
+( rightMerge_matrix rightMerge_fault )
+( botMerge_matrix botMerge_fault )
+);
+// ************************************************************************* //

@@ -1,0 +1,117 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+actions
+(
+    // =========================================================
+    // CENTRAL LONG DYKE
+    // x = 975 - 1025 m
+    // depth = 450 - 3000 m
+    // =========================================================
+    {
+        name    dyke_region;
+        type    cellSet;
+        action  new;
+
+        source  boxToCell;
+
+        sourceInfo
+        {
+            box (975 -3000 0) (1025 -450 1);
+        }
+    }
+
+    {
+        name    dyke_region;
+        type    cellZoneSet;
+        action  new;
+
+        source  setToCellZone;
+
+        sourceInfo
+        {
+            set dyke_region;
+        }
+    }
+
+
+    // =========================================================
+    // LEFT SHORT DYKE
+    // x = 675 - 725 m
+    // depth = 500 - 2000 m
+    // =========================================================
+    {
+        name    dyke_region2;
+        type    cellSet;
+        action  new;
+
+        source  boxToCell;
+
+        sourceInfo
+        {
+            box (675 -2000 0) (725 -500 1);
+        }
+    }
+
+    {
+        name    dyke_region2;
+        type    cellZoneSet;
+        action  new;
+
+        source  setToCellZone;
+
+        sourceInfo
+        {
+            set dyke_region2;
+        }
+    }
+
+
+    // =========================================================
+    // RIGHT SHORT DYKE
+    // x = 1275 - 1325 m
+    // depth = 500 - 2000 m
+    // =========================================================
+    {
+        name    dyke_region3;
+        type    cellSet;
+        action  new;
+
+        source  boxToCell;
+
+        sourceInfo
+        {
+            box (1275 -2000 0) (1325 -500 1);
+        }
+    }
+
+    {
+        name    dyke_region3;
+        type    cellZoneSet;
+        action  new;
+
+        source  setToCellZone;
+
+        sourceInfo
+        {
+            set dyke_region3;
+        }
+    }
+
+    
+);
