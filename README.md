@@ -4,7 +4,7 @@ This repository contains the numerical models and post-processing
 scripts associated with the Lava–Dyke Transition (LDT) modelling
 section of:
 
-"TITLE OF MANUSCRIPT"
+"Sulphides are everywhere"
 
 ## Purpose
 
