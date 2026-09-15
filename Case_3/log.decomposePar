@@ -1,0 +1,618 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 10-89f925dc708d
+Exec   : decomposePar
+Date   : Sep 09 2026
+Time   : 15:21:17
+Host   : "nevado.geomar.de"
+PID    : 354425
+I/O    : uncollated
+Case   : /home/ykrishna/HydrothermalFoam_cases/test_fault_10m
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libfreesteam.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfreesteam.so"
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1247
+    dlopen error : libHydroThermoPhysicalModels.so: cannot open shared object file: No such file or directory
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libHydroThermoPhysicalModels.so"
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decomposer scotch
+
+Finished decomposition in 0.103745 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 4000
+    Number of faces shared with processor 1 = 77
+    Number of faces shared with processor 2 = 40
+    Number of faces shared with processor 3 = 17
+    Number of processor patches = 3
+    Number of processor faces = 134
+    Number of boundary faces = 8130
+
+Processor 1
+    Number of cells = 3966
+    Number of faces shared with processor 0 = 77
+    Number of faces shared with processor 3 = 53
+    Number of faces shared with processor 8 = 66
+    Number of faces shared with processor 9 = 10
+    Number of processor patches = 4
+    Number of processor faces = 206
+    Number of boundary faces = 7984
+
+Processor 2
+    Number of cells = 4003
+    Number of faces shared with processor 0 = 40
+    Number of faces shared with processor 3 = 62
+    Number of faces shared with processor 4 = 58
+    Number of faces shared with processor 17 = 32
+    Number of processor patches = 4
+    Number of processor faces = 192
+    Number of boundary faces = 8122
+
+Processor 3
+    Number of cells = 3978
+    Number of faces shared with processor 0 = 17
+    Number of faces shared with processor 1 = 53
+    Number of faces shared with processor 2 = 62
+    Number of faces shared with processor 4 = 75
+    Number of faces shared with processor 5 = 7
+    Number of faces shared with processor 9 = 50
+    Number of processor patches = 6
+    Number of processor faces = 264
+    Number of boundary faces = 7956
+
+Processor 4
+    Number of cells = 4016
+    Number of faces shared with processor 2 = 58
+    Number of faces shared with processor 3 = 75
+    Number of faces shared with processor 5 = 59
+    Number of faces shared with processor 10 = 8
+    Number of faces shared with processor 17 = 8
+    Number of faces shared with processor 18 = 70
+    Number of processor patches = 6
+    Number of processor faces = 278
+    Number of boundary faces = 8032
+
+Processor 5
+    Number of cells = 4000
+    Number of faces shared with processor 3 = 7
+    Number of faces shared with processor 4 = 59
+    Number of faces shared with processor 6 = 89
+    Number of faces shared with processor 9 = 65
+    Number of faces shared with processor 10 = 42
+    Number of processor patches = 5
+    Number of processor faces = 262
+    Number of boundary faces = 8000
+
+Processor 6
+    Number of cells = 3994
+    Number of faces shared with processor 5 = 89
+    Number of faces shared with processor 7 = 30
+    Number of faces shared with processor 9 = 13
+    Number of faces shared with processor 10 = 28
+    Number of faces shared with processor 11 = 52
+    Number of processor patches = 5
+    Number of processor faces = 212
+    Number of boundary faces = 8088
+
+Processor 7
+    Number of cells = 4041
+    Number of faces shared with processor 6 = 30
+    Number of faces shared with processor 8 = 64
+    Number of faces shared with processor 9 = 60
+    Number of processor patches = 3
+    Number of processor faces = 154
+    Number of boundary faces = 8236
+
+Processor 8
+    Number of cells = 3967
+    Number of faces shared with processor 1 = 66
+    Number of faces shared with processor 7 = 64
+    Number of faces shared with processor 9 = 64
+    Number of processor patches = 3
+    Number of processor faces = 194
+    Number of boundary faces = 7994
+
+Processor 9
+    Number of cells = 4013
+    Number of faces shared with processor 1 = 10
+    Number of faces shared with processor 3 = 50
+    Number of faces shared with processor 5 = 65
+    Number of faces shared with processor 6 = 13
+    Number of faces shared with processor 7 = 60
+    Number of faces shared with processor 8 = 64
+    Number of processor patches = 6
+    Number of processor faces = 262
+    Number of boundary faces = 8026
+
+Processor 10
+    Number of cells = 4000
+    Number of faces shared with processor 4 = 8
+    Number of faces shared with processor 5 = 42
+    Number of faces shared with processor 6 = 28
+    Number of faces shared with processor 11 = 84
+    Number of faces shared with processor 12 = 36
+    Number of faces shared with processor 14 = 6
+    Number of faces shared with processor 18 = 62
+    Number of faces shared with processor 19 = 30
+    Number of processor patches = 8
+    Number of processor faces = 296
+    Number of boundary faces = 8000
+
+Processor 11
+    Number of cells = 4010
+    Number of faces shared with processor 6 = 52
+    Number of faces shared with processor 10 = 84
+    Number of faces shared with processor 14 = 70
+    Number of processor patches = 3
+    Number of processor faces = 206
+    Number of boundary faces = 8082
+
+Processor 12
+    Number of cells = 4032
+    Number of faces shared with processor 10 = 36
+    Number of faces shared with processor 13 = 66
+    Number of faces shared with processor 14 = 46
+    Number of faces shared with processor 16 = 82
+    Number of faces shared with processor 19 = 30
+    Number of processor patches = 5
+    Number of processor faces = 260
+    Number of boundary faces = 8100
+
+Processor 13
+    Number of cells = 3996
+    Number of faces shared with processor 12 = 66
+    Number of faces shared with processor 14 = 76
+    Number of processor patches = 2
+    Number of processor faces = 142
+    Number of boundary faces = 8114
+
+Processor 14
+    Number of cells = 3963
+    Number of faces shared with processor 10 = 6
+    Number of faces shared with processor 11 = 70
+    Number of faces shared with processor 12 = 46
+    Number of faces shared with processor 13 = 76
+    Number of processor patches = 4
+    Number of processor faces = 198
+    Number of boundary faces = 7992
+
+Processor 15
+    Number of cells = 3991
+    Number of faces shared with processor 16 = 80
+    Number of faces shared with processor 17 = 32
+    Number of faces shared with processor 19 = 20
+    Number of processor patches = 3
+    Number of processor faces = 132
+    Number of boundary faces = 8114
+
+Processor 16
+    Number of cells = 4028
+    Number of faces shared with processor 12 = 82
+    Number of faces shared with processor 15 = 80
+    Number of faces shared with processor 19 = 52
+    Number of processor patches = 3
+    Number of processor faces = 214
+    Number of boundary faces = 8106
+
+Processor 17
+    Number of cells = 4040
+    Number of faces shared with processor 2 = 32
+    Number of faces shared with processor 4 = 8
+    Number of faces shared with processor 15 = 32
+    Number of faces shared with processor 18 = 60
+    Number of faces shared with processor 19 = 60
+    Number of processor patches = 5
+    Number of processor faces = 192
+    Number of boundary faces = 8200
+
+Processor 18
+    Number of cells = 3992
+    Number of faces shared with processor 4 = 70
+    Number of faces shared with processor 10 = 62
+    Number of faces shared with processor 17 = 60
+    Number of faces shared with processor 19 = 64
+    Number of processor patches = 4
+    Number of processor faces = 256
+    Number of boundary faces = 7984
+
+Processor 19
+    Number of cells = 3970
+    Number of faces shared with processor 10 = 30
+    Number of faces shared with processor 12 = 30
+    Number of faces shared with processor 15 = 20
+    Number of faces shared with processor 16 = 52
+    Number of faces shared with processor 17 = 60
+    Number of faces shared with processor 18 = 64
+    Number of processor patches = 6
+    Number of processor faces = 256
+    Number of boundary faces = 7940
+
+Number of processor faces = 2155
+Max number of cells = 4041 (1.025% above average 4000)
+Max number of processor patches = 8 (81.8182% above average 4.4)
+Max number of faces between processors = 296 (37.355% above average 215.5)
+
+Time = 0s
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+Processor 8: field transfer
+Processor 9: field transfer
+Processor 10: field transfer
+Processor 11: field transfer
+Processor 12: field transfer
+Processor 13: field transfer
+Processor 14: field transfer
+Processor 15: field transfer
+Processor 16: field transfer
+Processor 17: field transfer
+Processor 18: field transfer
+Processor 19: field transfer
+
+End
+
