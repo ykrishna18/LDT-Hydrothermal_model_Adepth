@@ -1,6 +1,0 @@
-# dynamicCode:
-# SHA1 = 81e80fd6feb7fb612bf35eb465ca8ac805e76a7d
-
-SOURCE += codedFunctionObjectTemplate.C
-
-LIB = $(PWD)/../platforms/$(WM_OPTIONS)/lib/libcalPlumeT_81e80fd6feb7fb612bf35eb465ca8ac805e76a7d
